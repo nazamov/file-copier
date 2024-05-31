@@ -3,7 +3,7 @@ const axios = require("axios");
 const directoryPath = require("./dir");
 const url = require("./arg")("--url");
 
-function copyAll(path, folder = "") {
+async function copyAll(path, folder = "") {
   try {
     const fileList = fs.readdirSync(path);
     for (let item of fileList) {
@@ -26,7 +26,7 @@ function copyAll(path, folder = "") {
           },
           data: form_data,
         };
-        axios(request_config);
+        await axios(request_config);
       }
     }
   } catch (err) {
