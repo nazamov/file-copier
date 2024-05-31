@@ -1,7 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const directoryPath = require("./dir");
-const url = require("./arg")("--url");
+const url = require("./arg")("url");
 
 async function copyAll(path, folder = "") {
   try {
