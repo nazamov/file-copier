@@ -3,6 +3,8 @@ const axios = require("axios");
 const directoryPath = require("./dir");
 const url = require("./arg")("url");
 
+console.log("request to:", url);
+
 async function copyAll(path, folder = "") {
   try {
     const fileList = fs.readdirSync(path);
