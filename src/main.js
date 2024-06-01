@@ -32,7 +32,7 @@ async function copyAll(path, folder = "") {
       }
     }
   } catch (err) {
-    console.error("Error", err.message);
+    console.error("Error", err);
   }
 }
 
